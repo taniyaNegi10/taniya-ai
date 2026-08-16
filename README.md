@@ -6,6 +6,14 @@ The frontend communicates with a separate **FastAPI backend**, which connects to
 
 ---
 
+## Live Demo
+
+🌐 **Live Portfolio:** https://taniya-portfolio-ai.onrender.com
+
+⚡ **Backend API:** https://taniya-ai-backend.onrender.com
+
+📖 **API Documentation:** https://taniya-ai-backend.onrender.com/docs
+
 ## ✨ Features
 
 * 🤖 AI-powered portfolio assistant
