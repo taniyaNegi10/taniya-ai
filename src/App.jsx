@@ -6,9 +6,10 @@ import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Education from './components/Education'
 import Certifications from './components/Certifications'
-import Activities from './components/Activities'
 import Chat from './components/Chat'
 import './App.css'
+
+
 
 
 
