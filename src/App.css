@@ -1251,3 +1251,313 @@
   border-left: 3px solid #d98aa5;
   opacity: 0.85;
 }
+
+/* ================================
+   MOBILE RESPONSIVE DESIGN
+   ================================ */
+
+@media (max-width: 768px) {
+
+  /* Prevent horizontal scrolling */
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    height: 65px;
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  .nav-links {
+    gap: 14px;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 70%;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+
+
+  .hero {
+    min-height: auto;
+    width: 100%;
+    box-sizing: border-box;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 110px 24px 70px;
+    gap: 45px;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-intro {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 15vw, 65px);
+    line-height: 0.95;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: 1.5px;
+  }
+
+  .hero-description {
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero-buttons button {
+    padding: 13px 20px;
+  }
+
+  .hero-card {
+    width: 100%;
+    max-width: 280px;
+    height: 280px;
+    margin: 0 auto;
+  }
+
+
+  
+  .about {
+    padding: 75px 24px;
+  }
+
+  .about-heading h2 {
+    font-size: 36px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  .about-text {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-highlights {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .highlight-card {
+    min-width: 0;
+    padding: 20px 10px;
+  }
+
+
+  /* SKILLS */
+  .skills {
+    padding: 75px 24px;
+  }
+
+  .skills-heading h2 {
+    font-size: 36px;
+  }
+
+  .skills-grid {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .skill-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px;
+  }
+
+
+  /* PROJECTS */
+  .projects {
+    padding: 75px 24px;
+  }
+
+  .projects-heading h2 {
+    font-size: 36px;
+  }
+
+  .projects-grid {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px;
+  }
+
+  .project-card h3 {
+    font-size: 25px;
+  }
+
+  .project-description {
+    font-size: 15px;
+  }
+
+
+
+  .experience {
+    padding: 75px 24px;
+  }
+
+  .experience-heading h2 {
+    font-size: 36px;
+  }
+
+  .experience-card {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 25px;
+  }
+
+  .experience-top {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+
+
+  .education {
+    padding: 75px 24px;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+
+  .certifications {
+    padding: 75px 24px;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+
+  .activities {
+    padding: 75px 24px;
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+
+  .chat-section {
+    padding: 75px 20px;
+  }
+
+  .chat-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .chat-box {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .nav-links {
+    gap: 12px;
+    max-width: 68%;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .hero h2 {
+    font-size: 17px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .about,
+  .skills,
+  .projects,
+  .experience,
+  .education,
+  .certifications,
+  .activities {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-card,
+  .skill-card,
+  .experience-card {
+    padding: 22px;
+  }
+}
