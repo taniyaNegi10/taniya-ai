@@ -37,7 +37,6 @@ function App() {
       <Experience/>
       <Education/>
       <Certifications/>
-      <Activities/>
       <Chat/>
     </>
   )

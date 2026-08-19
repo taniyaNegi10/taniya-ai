@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 function Chat() {
   const [input, setInput] = useState('')
@@ -20,7 +21,6 @@ function Chat() {
       behavior: 'smooth'
     })
   }, [messages, isLoading])
-
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return
@@ -147,7 +147,6 @@ function Chat() {
     }
   }
 
-
   return (
     <section id="chat">
 
@@ -167,7 +166,6 @@ function Chat() {
         </span>
 
       </div>
-
 
       {/* Chat Box */}
 
@@ -199,15 +197,19 @@ function Chat() {
 
                 </div>
 
-
                 {/* Message */}
 
                 <div className="message-content">
 
                   {message.role === 'assistant' ? (
 
-                    <ReactMarkdown>
-                      {message.text}
+                    <ReactMarkdown
+                      remarkPlugins={[remarkGfm]}
+                    >
+                      {message.text.replace(
+                        /<br\s*\/?>/gi,
+                        '\n'
+                      )}
                     </ReactMarkdown>
 
                   ) : (
@@ -224,7 +226,6 @@ function Chat() {
 
             )
           )}
-
 
           {/* Typing indicator */}
 
@@ -248,13 +249,11 @@ function Chat() {
 
           )}
 
-
           {/* Auto scroll */}
 
           <div ref={messagesEndRef} />
 
         </div>
-
 
         {/* Input */}
 
@@ -280,7 +279,6 @@ function Chat() {
 
             disabled={isLoading}
           />
-
 
           <button
             onClick={handleSend}
